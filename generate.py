@@ -6,7 +6,7 @@ def generate_text(model, tokenizer, input_message, n_tokens):
         max_length = MAX_LEN, 
         do_sample=True,
         temperature=.8,
-        top_k=50,
+        top_k=0,
         top_p=.85
     )
     return tokenizer.decode(outputs[0], skip_special_tokens=True)
